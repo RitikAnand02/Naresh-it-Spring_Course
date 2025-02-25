@@ -1,0 +1,33 @@
+Program Statements for Constructor Injection in Spring:
+=======================================================
+Define a Service Interface:
+Create an interface (e.g., CarService) that declares the methods which the service will provide.
+The interface acts as a contract for the concrete implementation of the service.
+Create a Concrete Service Implementation:
+
+Implement the service interface in a concrete class (e.g., CarServiceImpl) that provides the logic for the declared methods.
+This class contains the actual business logic and functionality, such as starting the engine.
+Define the Consumer Class:
+Create a class (e.g., Driver) that requires the service (CarService).
+This class does not manage the creation of the service but depends on it to perform its functionality.
+Use Constructor Injection in the Consumer Class:
+
+In the consumer class (Driver), define a constructor that takes the service interface (CarService) as a parameter.
+This constructor will be automatically invoked by Spring when it creates the Driver bean.
+Spring will automatically inject the CarServiceImpl into the Driver class if both are defined as Spring beans.
+Configure Spring Beans in Application Context:
+
+Declare the CarServiceImpl and Driver classes as beans in the Spring configuration file (applicationContext.xml) or using annotations like @Service for the service class and @Component or @Autowired for the consumer class.
+Alternatively, use Java-based configuration (@Configuration) to define the beans.
+Spring Automatically Resolves Dependencies:
+
+When Spring initializes the application context, it identifies that Driver requires a CarService through its constructor.
+Spring will then look for a bean that implements the CarService interface (e.g., CarServiceImpl) and inject it into the Driver bean at runtime.
+Main Application:
+
+In the main application or Spring Boot application, the Spring context is created (either via AnnotationConfigApplicationContext or SpringApplication.run).
+Once the context is initialized, Spring automatically injects the required dependencies into the beans and makes them available for use.
+Using the Injected Service in the Consumer Class:
+
+The consumer class (Driver) can now access the injected service and call its methods (e.g., starting the engine) to perform its operations.
+Since the service is injected via the constructor, it is guaranteed to be available at the time the consumer class is created, ensuring that the consumer class is never in an invalid state.

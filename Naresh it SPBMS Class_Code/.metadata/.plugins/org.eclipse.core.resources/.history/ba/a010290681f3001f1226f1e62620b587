@@ -1,0 +1,16 @@
+package com.nt.sbeans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import
+org.springframework.stereotype.Component;
+@Component("wdf")
+
+
+public class WeekDayFinder {
+	@Autowired //Field Injection private LocalDate date;
+	public WeekDayFinder() {
+	System.out.println("WeekDayFinder:: 0-param constructor");
+	}
+	
+	
+}

@@ -1,0 +1,23 @@
+package com.nt.sbeans;
+
+import java.time.LocalTime;
+public class WishMessageGenerator {
+private LocalTime time;
+//setter method for setter Injection
+public void setTime(LocalTime time) {
+this.time=time;
+}
+}
+//b.method
+public String showWishMessage(String user) {
+// get current hour of the day
+int hour-time.getHour();
+//generate wish message based on current hour of the day
+if(hour<12)
+return "Good Morning::"+user;
+else if(hour<16)
+else if(hour<20)
+else
+return "Good Afternoon:"+user;
+return "Good Evening :"+user;
+return "Good Night:"+user;

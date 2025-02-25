@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.nt.cfgs&apos; to &apos;IOCProj03-DependencyInjection-Circular_Injection/src&apos;&#x0D;&#x0A;- Original project: &apos;IOCProj02-DependencyInjection-Constructor_Injection&apos;&#x0D;&#x0A;- Destination element: &apos;IOCProj03-DependencyInjection-Circular_Injection/src&apos;&#x0D;&#x0A;- Original element: &apos;IOCProj02-DependencyInjection-Constructor_Injection/src/com.nt.cfgs&apos;" description="Copy package" destination="=IOCProj03-DependencyInjection-Circular_Injection/src" element1="/src&lt;com.nt.cfgs" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1740060152907" version="1.0"/>
+</session>

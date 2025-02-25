@@ -1,0 +1,99 @@
+Q1)
+You are tasked with developing a Spring Core application that prints the current date using setter-based dependency injection. The application will make use of LocalDate (a predefined class in Java) to demonstrate the setter injection of a LocalDate object.
+
+Requirements:
+DatePrinter Class:
+Create a DatePrinter class with the following attributes:
+LocalDate currentDate: This will store the current date.
+Implement a setter method setCurrentDate(LocalDate currentDate) to allow for dependency injection using Spring.
+Implement a printDate() method that prints the current date in the format YYYY-MM-DD.
+
+Note:
+------
+Use Xml file to configure Spring bean.
+
+Main Class:
+Create a main class that loads the Spring application context, retrieves the DatePrinter bean, and call printDate().
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2)
+
+You are tasked with developing a Spring Core application that generates a wish message based on the current time of day using setter-based dependency injection. The application should use LocalDateTime to determine whether to send a "Good Morning", "Good Afternoon", or "Good Evening" message.
+
+Requirements:
+WishMessageGenerator Class:
+Create a WishMessageGenerator class with the following attributes:
+LocalDateTime currentDateTime: This will store the current date and time.
+Implement a setter method for currentDateTime to allow for dependency injection using Spring.
+
+Implement a generateWishMessage() method that returns:
+"Good Morning" if the time is before 12 PM.
+"Good Afternoon" if the time is between 12 PM and 6 PM.
+"Good Evening" if the time is after 6 PM.
+
+Note:
+------
+Use Xml file to configure Spring bean.
+
+
+Main Class:
+Create a main class that loads the Spring application context, retrieves the WishMessageGenerator bean, and prints the wish message based on the current time.
+
+Expected Output:
+If the current time is before 12 PM:
+	Good Morning
+If the current time is between 12 PM and 6 PM:
+	Good Afternoon
+If the current time is after 6 PM:
+	Good Evening
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3)
+------
+ DiscountCalculator Using Setter Injection in Spring
+You are tasked with developing a Spring Core application that calculates discounts based on a product's price and the day of the week using setter-based dependency injection. The discount rate will change based on whether it's a weekday or weekend.
+
+Requirements:
+DiscountCalculator Class:
+Create a DiscountCalculator class with the following attributes:
+LocalDate currentDate: This will store the current date.
+double price: This will store the product price.
+Implement setter methods for currentDate and price to allow for dependency injection using Spring.
+Implement a calculateDiscount() method that returns:
+A 10% discount if the day is a weekday (Monday to Friday).
+A 20% discount if the day is a weekend (Saturday or Sunday).
+
+Note:
+------
+Use Xml file to configure Spring bean.
+
+
+Main Class:
+Create a main class that loads the Spring application context, retrieves the DiscountCalculator bean, and prints the discounted price based on the day of the week.
+
+Expected Output:
+If the current day is a weekday (e.g., Tuesday) and the price is 100:
+	Discounted Price: 90.0 (10% discount applied)
+
+If the current day is a weekend (e.g., Saturday) and the price is 100:
+	Discounted Price: 80.0 (20% discount applied)
+
+============================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

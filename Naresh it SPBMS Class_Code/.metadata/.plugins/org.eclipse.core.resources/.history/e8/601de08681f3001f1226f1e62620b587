@@ -1,0 +1,13 @@
+package com.nt.cfgs;
+
+import java.time.LocalDate;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan; import
+org.springframework.context.annotation.Configuration;
+@Configuration // @Component++
+@ComponentScan (base Packages = "com.nt.sbeans")
+
+
+public class AppConfig {
+
+}

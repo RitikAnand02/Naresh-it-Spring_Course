@@ -1,0 +1,22 @@
+package com.nt.sbeans;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+
+import org.springframework.stereotype.Component;
+@Component("wf")
+
+public class WeekDayFinder {
+    
+    private final LocalDate localDate;
+
+    // Constructor Injection
+    public WeekDayFinder(LocalDate localDate) {
+        this.localDate = localDate;
+    }
+
+    public boolean isWeekend() {
+        DayOfWeek day = localDate.getDayOfWeek();
+        return (day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY);
+    }
+}
