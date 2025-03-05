@@ -2,4 +2,12 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.nt.sbeans.WeekDayFinder"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.nt.comps.Courier"/>
+    <fullyQualifiedTypeName name="com.nt.comps.DTDC"/>
+    <fullyQualifiedTypeName name="com.nt.comps.BlueDart"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="com.nt.comps.Flipkart"/>
+    <fullyQualifiedTypeName name="com.nt.factory.FlipkartFactory"/>
 </qualifiedTypeNameHistroy>

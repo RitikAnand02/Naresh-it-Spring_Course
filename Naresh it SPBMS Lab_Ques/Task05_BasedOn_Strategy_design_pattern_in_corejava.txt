@@ -1,0 +1,57 @@
+
+Q1)
+
+You are tasked with developing a Core Java application that manages travel bookings using different transportation methods (Bus, Train, and Flight). This should be implemented using the Strategy Design Pattern.
+
+Requirements:
+Transportation Interface:
+
+Methods:
+void bookTrip(String destination, double price): A method to book a trip to the specified destination with the given price.
+Concrete Classes for Transportation Methods:
+
+BusTransportation Class:
+Implements the Transportation interface and prints "Booked a trip to [destination] by Bus for [price]."
+TrainTransportation Class:
+Implements the Transportation interface and prints "Booked a trip to [destination] by Train for [price]."
+FlightTransportation Class:
+Implements the Transportation interface and prints "Booked a trip to [destination] by Flight for [price]."
+
+TravelBooking Class:
+Attributes:
+Transportation transportation: A reference to the selected transportation method.
+Methods:
+void setTransportation(Transportation transportation): A setter method to choose the transportation strategy.
+void executeBooking(String destination, double price): Executes the booking using the selected transportation method.
+
+Main Class:
+Demonstrates the functionality by:
+Booking trips using different transportation methods (Bus, Train, Flight).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2)
+
+You are tasked with developing a Core Java application that manages food delivery using different delivery methods (Dine-In, Takeaway, and Home Delivery). This should be implemented using the Strategy Design Pattern.
+
+Requirements:
+DeliveryMethod Interface:
+Methods:
+void deliverFood(String restaurantName, String dishName): A method to deliver food from the specified restaurant with the given dish name.
+
+DineInDelivery Class:
+Implements the DeliveryMethod interface and prints "Dine-in at [restaurantName]: Enjoying [dishName]."
+TakeawayDelivery Class:
+Implements the DeliveryMethod interface and prints "Takeaway from [restaurantName]: Ready to pick up [dishName]."
+HomeDelivery Class:
+Implements the DeliveryMethod interface and prints "Home delivery from [restaurantName]: [dishName] is on its way!"
+
+FoodDelivery Class:
+Attributes:
+DeliveryMethod deliveryMethod: A reference to the selected delivery method.
+Methods:
+void setDeliveryMethod(DeliveryMethod deliveryMethod): A setter method to choose the delivery strategy.
+void executeDelivery(String restaurantName, String dishName): Executes the food delivery using the selected delivery method.
+
+Main Class:
+Demonstrates the functionality by:
+Delivering food using different delivery methods (Dine-In, Takeaway, Home Delivery).

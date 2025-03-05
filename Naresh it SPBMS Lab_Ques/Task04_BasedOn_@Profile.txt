@@ -1,0 +1,24 @@
+Q1.
+Injecting Multiple Payment Services.
+You need to implement a payment system where different payment methods (Credit Card, PayPal, and UPI) are available. The application should allow a user to select a payment method using @Qualifier.
+
+Requirements:
+Create a PaymentService interface with a method processPayment().
+Implement CreditCardPaymentService, PayPalPaymentService, and UPIPaymentService.
+Use @Service annotation to register these beans in Spring.
+In PaymentProcessor class, inject PaymentService using @Autowired and @Qualifier.
+The selected payment service should be determined by @Qualifier("paypalService") or another option.
+How can you ensure the correct payment service is injected using @Qualifier in Spring?
+Note:Use AppConfig java class to make configuration.(Don't use xml configuration).
+
+Q2.Vehicle Service Selection.
+You are designing a vehicle maintenance system that can service cars, bikes, and trucks. Each vehicle has a different maintenance process, and Spring should select the appropriate service using @Qualifier.
+
+Requirements:
+Create a VehicleService interface with a method performService().
+Implement CarService, BikeService, and TruckService.
+Annotate each service with @Service and a unique bean name.
+In ServiceCenter, inject VehicleService using @Autowired and @Qualifier("carService").
+When performService() is called, it should execute the correct vehicle service.
+How would you configure and use @Qualifier to inject the correct vehicle service?
+Note:Use AppConfig java class to make configuration.(Don't use xml configuration).

@@ -1,8 +1,0 @@
-package com.nt.main;
-
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import com.nt.sbeans.SeasonFinder;
-public class DependencyInjection Test {
-public static void main(String[] args) {
-	
-}
