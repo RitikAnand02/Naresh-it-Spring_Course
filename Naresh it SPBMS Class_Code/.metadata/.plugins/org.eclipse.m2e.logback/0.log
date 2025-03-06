@@ -354,3 +354,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration JUnitCore reference
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 2025-03-05 18:55:53,369 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2025-03-05 18:55:55,422 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2025-03-06 12:05:25,813 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

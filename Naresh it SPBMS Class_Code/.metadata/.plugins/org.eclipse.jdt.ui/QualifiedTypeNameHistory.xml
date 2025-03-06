@@ -7,7 +7,11 @@
     <fullyQualifiedTypeName name="com.nt.comps.Courier"/>
     <fullyQualifiedTypeName name="com.nt.comps.DTDC"/>
     <fullyQualifiedTypeName name="com.nt.comps.BlueDart"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="com.nt.comps.Flipkart"/>
     <fullyQualifiedTypeName name="com.nt.factory.FlipkartFactory"/>
+    <fullyQualifiedTypeName name="com.nt.comps.DieselEngine"/>
+    <fullyQualifiedTypeName name="com.nt.comps.ElectricEngine"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="com.nt.comps.Vehicle"/>
+    <fullyQualifiedTypeName name="com.nt.factory.VehicleFactory"/>
 </qualifiedTypeNameHistroy>
