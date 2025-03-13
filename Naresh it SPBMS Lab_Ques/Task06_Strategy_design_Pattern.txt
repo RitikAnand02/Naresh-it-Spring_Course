@@ -1,0 +1,95 @@
+Q1)
+You are tasked with developing a Spring Core application to sort a list of numbers using different sorting algorithms (Bubble Sort and Selection Sort) by applying the Strategy Design Pattern.
+
+Requirements:
+SortingStrategy Interface:
+Methods:
+void sort(int[] numbers): A method to sort an array of integers.
+
+BubbleSort Class:
+Implements SortingStrategy interface.
+Methods:
+void sort(int[] numbers): Implements the Bubble Sort algorithm and prints the sorted numbers.
+
+Selection Class:
+Implements SortingStrategy interface.
+Methods:
+void sort(int[] numbers): Implements the Selection Sort algorithm and prints the sorted numbers.
+
+SortingContext Class:
+Attributes:
+private SortingStrategy strategy: A reference to the current sorting strategy.
+Methods:
+void setStrategy(SortingStrategy strategy): Sets the sorting strategy.
+void executeSort(int[] numbers): Uses the current strategy to sort and print the numbers.
+
+AppConfig Class:
+Configure Spring using @ComponentScan to manage the beans.
+
+SortingTester Class:
+Methods:
+main(-): Demonstrates the functionality by sorting an array of numbers using different strategies.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2)
+
+You are tasked with developing a Spring Core application that manages travel bookings using different transportation methods (Bus, Train, and Flight). This should be implemented using the Strategy Design Pattern.
+
+Requirements:
+Transportation Interface:
+
+Methods:
+void bookTrip(String destination, double price): A method to book a trip to the specified destination with the given price.
+Concrete Classes for Transportation Methods:
+
+BusTransportation Class:
+Implements the Transportation interface and prints "Booked a trip to [destination] by Bus for [price]."
+TrainTransportation Class:
+Implements the Transportation interface and prints "Booked a trip to [destination] by Train for [price]."
+FlightTransportation Class:
+Implements the Transportation interface and prints "Booked a trip to [destination] by Flight for [price]."
+
+TravelBooking Class:
+Attributes:
+Transportation transportation: A reference to the selected transportation method.
+Methods:
+void setTransportation(Transportation transportation): A setter method to choose the transportation strategy.
+void executeBooking(String destination, double price): Executes the booking using the selected transportation method.
+
+AppConfig Class:
+Configuration class that scans for components and injects dependencies.
+
+Main Class:
+Loads the Spring application context, retrieves the TravelBooking bean, and demonstrates the functionality by:
+Booking trips using different transportation methods (Bus, Train, Flight).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3)
+
+You are tasked with developing a Spring Core application that manages food delivery using different delivery methods (Dine-In, Takeaway, and Home Delivery). This should be implemented using the Strategy Design Pattern.
+
+Requirements:
+DeliveryMethod Interface:
+Methods:
+void deliverFood(String restaurantName, String dishName): A method to deliver food from the specified restaurant with the given dish name.
+
+DineInDelivery Class:
+Implements the DeliveryMethod interface and prints "Dine-in at [restaurantName]: Enjoying [dishName]."
+TakeawayDelivery Class:
+Implements the DeliveryMethod interface and prints "Takeaway from [restaurantName]: Ready to pick up [dishName]."
+HomeDelivery Class:
+Implements the DeliveryMethod interface and prints "Home delivery from [restaurantName]: [dishName] is on its way!"
+
+FoodDelivery Class:
+Attributes:
+DeliveryMethod deliveryMethod: A reference to the selected delivery method.
+Methods:
+void setDeliveryMethod(DeliveryMethod deliveryMethod): A setter method to choose the delivery strategy.
+void executeDelivery(String restaurantName, String dishName): Executes the food delivery using the selected delivery method.
+
+AppConfig Class:
+Configuration class that scans for components and injects dependencies.
+
+Main Class:
+Loads the Spring application context, retrieves the FoodDelivery bean, and demonstrates the functionality by:
+Delivering food using different delivery methods (Dine-In, Takeaway, Home Delivery).
