@@ -38,4 +38,17 @@ Maven-Spring Context Support - xml file
     <version>6.2.3</version>
 </dependency>
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Maven-Java Annotation Api - xml file
+-------------------------------------------------
+
+<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+<dependency>
+    <groupId>javax.annotation</groupId>
+    <artifactId>javax.annotation-api</artifactId>
+    <version>1.2</version>
+</dependency>
+
+
+
 

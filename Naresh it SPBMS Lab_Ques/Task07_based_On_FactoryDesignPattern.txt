@@ -1,0 +1,117 @@
+Q1)
+Vehicle Manufacturing System
+You are tasked with developing a Spring Core application for a vehicle manufacturing system that produces different types of vehicles (Car, Truck, Motorcycle) based on user specifications. The system should implement the Factory Design Pattern to manage vehicle creation, including various features like electric or diesel engines, and different types of tires.
+
+Requirements:
+Vehicle Interface:
+Create a Vehicle interface with the following methods:
+String getDescription(): Returns a description of the vehicle.
+
+Car Class:
+Implements the Vehicle interface and has attributes for engine type and number of doors.
+Truck Class:
+Implements the Vehicle interface and has attributes for engine type and payload capacity.
+Motorcycle Class:
+Implements the Vehicle interface and has attributes for engine type and whether it has a sidecar.
+
+Engine Interface:
+Define an Engine interface with the method:
+String getEngineType(): Returns the type of engine (e.g., Electric, Diesel).
+
+ElectricEngine Class:
+Implements the Engine interface and returns "Electric" for getEngineType().
+DieselEngine Class:
+Implements the Engine interface and returns "Diesel" for getEngineType().
+
+VehicleFactory Interface:
+Define a VehicleFactory interface with the method:
+Vehicle createVehicle(String type, String engineType): This method should return a Vehicle object based on the provided type and engine type.
+
+ConcreteVehicleFactory Class:
+Implements the VehicleFactory interface. It should create instances of Car, Truck, and Motorcycle based on the provided type and engine type.
+
+VehicleService Class:
+Create a VehicleService class that uses the VehicleFactory to create and describe vehicles.
+Attributes:
+VehicleFactory vehicleFactory: Injected using @Autowired.
+Methods:
+createVehicle(String type, String engineType): Uses the factory to create a vehicle and returns its description.
+
+AppConfig Class:
+
+Create a configuration class annotated with @Configuration to enable component scanning for the vehicle and engine classes, and the factory.
+
+Main Class:
+Create a main class that:
+Loads the Spring application context.
+Uses the VehicleService to create a vehicle based on user input and prints its description.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q2)
+
+Banking System with Factory Design Pattern
+
+Bank Interface:
+Methods:
+double getAmount(): Retrieves the current balance of the account.
+void setAmount(double amount): Updates the current balance of the account.
+String deposit(double amount): Deposits money into the account and returns a user-friendly message.
+String withdraw(double amount): Withdraws money from the account and returns a user-friendly message.
+String toString(): Returns a string representation of the current account balance.
+
+SBI Class:Implements Bank interface.
+Attributes:
+private double amount: Represents the balance in the SBI account.
+Methods:
+double getAmount(): Returns the current balance of the SBI account.
+void setAmount(double amount): Sets the balance in the SBI account.
+String deposit(double amount): Adds money to the SBI account.
+String withdraw(double amount): Withdraws money from the SBI account. If the balance is insufficient, it returns an error message.
+String toString(): Returns the current balance of the SBI account as a string.
+
+HDFC Class:Implements Bank interface.
+Attributes:
+private double amount: Represents the balance in the HDFC account.
+Methods:
+double getAmount(): Returns the current balance of the HDFC account.
+void setAmount(double amount): Sets the balance in the HDFC account.
+String deposit(double amount): Adds money to the HDFC account.
+String withdraw(double amount): Withdraws money from the HDFC account. If the balance is insufficient, it returns an error message.
+String toString(): Returns the current balance of the HDFC account as a string.
+
+BankFactory Interface:
+Methods:
+Bank createBank(String bankType): Returns a specific bank object (SBI or HDFC) based on the provided type.
+
+ConcreteBankFactory Class:
+Implements BankFactory interface.
+Attributes:
+@Autowired SBI sbi: Injects the SBI class.
+@Autowired HDFC hdfc: Injects the HDFC class.
+Methods:
+Bank createBank(String bankType): Creates and returns an instance of SBI or HDFC based on the provided bankType.
+
+Customer Class:
+Attributes:
+private int customerId: Represents the unique ID of the customer.
+private String customerName: Stores the name of the customer.
+private Bank bank: Reference to the associated bank account.
+@Autowired BankFactory bankFactory: Injects the BankFactory to create the bank.
+Methods:
+void setCustomerId(int customerId): Sets the customer ID.
+void setCustomerName(String customerName): Sets the customer name.
+void setBank(String bankType): Sets the customer's bank using BankFactory.
+void deposit(double amount): Deposits money into the customer's bank account.
+void withdraw(double amount): Withdraws money from the customer's bank account.
+void displayDetails(): Displays the customer's details including the bank account balance.
+AppConfig Class:
+Use @ComponentScan to configure component scanning for Spring to detect beans automatically.
+
+BankTester Class:
+Retrieves the Customer beans from the Spring application context.
+Methods:
+main(-): Demonstrates the functionality of the banking system by creating customer objects, associating them with banks, and performing deposit and withdrawal operations.
+
+
