@@ -231,7 +231,8 @@
 <uri name="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" uri="jar:file:/C:/Users/HP/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.standard.schemas_1.0.800.v201901071922.jar!/xsd/ws-securitypolicy-1.2.xsd"/>
 <uri name="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200802" uri="jar:file:/C:/Users/HP/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.standard.schemas_1.0.800.v201901071922.jar!/xsd/ws-securitypolicy.xsd"/>
 <uri name="http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd" uri="jar:file:/C:/Users/HP/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.standard.schemas_1.0.800.v201901071922.jar!/xsd/xmldsig-core-schema.xsd"/>
+<uri name="http://www.w3.org/2001/XInclude" uri="jar:file:/C:/Users/HP/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.xsl.core_1.2.200.v202405130119.jar!/xslt-schemas/xinclude.xsd"/>
 <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/C:/Users/HP/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.eclipse.xsd_2.20.0.v20240604-0832.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
 <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/C:/Users/HP/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.eclipse.xsd_2.20.0.v20240604-0832.jar!/cache/www.w3.org/2001/xml.xsd"/>
-<uri name="http://www.w3.org/2001/XInclude" uri="jar:file:/C:/Users/HP/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.eclipse.wst.xsl.core_1.2.200.v202405130119.jar!/xslt-schemas/xinclude.xsd"/>
+<public publicId="-//LOG4J//DTD LOG4J//EN" uri="jar:file:/C:/Users/HP/.p2/pool/plugins/org.springsource.ide.eclipse.commons.ui_4.29.1.202503181316.jar!/dtd/log4j-1.2.dtd"/>
 </catalog>
