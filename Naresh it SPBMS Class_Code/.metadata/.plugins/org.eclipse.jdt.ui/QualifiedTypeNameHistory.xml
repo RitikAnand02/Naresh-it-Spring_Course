@@ -26,4 +26,5 @@
     <fullyQualifiedTypeName name="com.nt.sbeans.WishMessage"/>
     <fullyQualifiedTypeName name="com.nt.BootIocProj02DependencyInjectionWishMessageGeneratorApplication"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ImportResource"/>
 </qualifiedTypeNameHistroy>
