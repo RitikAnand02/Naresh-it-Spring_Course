@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "dc.xrayRate",
+    "type": "java.lang.String",
+    "description": "A description for 'dc.xrayRate'"
+  },
+  {
+    "name": "dc.mriScanRate",
+    "type": "java.lang.String",
+    "description": "A description for 'dc.mriScanRate'"
+  },
+  {
+    "name": "dc.ctscanRate",
+    "type": "java.lang.String",
+    "description": "A description for 'dc.ctscanRate'"
+  },
+  {
+    "name": "dc.ecgRate",
+    "type": "java.lang.String",
+    "description": "A description for 'dc.ecgRate'"
+  },
+  {
+    "name": "pi.name",
+    "type": "java.lang.String",
+    "description": "A description for 'pi.name'"
+  },
+  {
+    "name": "pi.addrs",
+    "type": "java.lang.String",
+    "description": "A description for 'pi.addrs'"
+  },
+  {
+    "name": "pi.mobileNo",
+    "type": "java.lang.String",
+    "description": "A description for 'pi.mobileNo'"
+  }
+]}
