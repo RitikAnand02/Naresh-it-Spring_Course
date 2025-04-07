@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "org.nit.name",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.name'"
+  },
+  {
+    "name": "org.nit.addrs",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.addrs'"
+  },
+  {
+    "name": "org.nit.pincode",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.pincode'"
+  },
+  {
+    "name": "org.nit.contact",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.contact'"
+  }
+]}
