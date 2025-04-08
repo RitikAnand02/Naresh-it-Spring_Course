@@ -1,0 +1,30 @@
+# Employee Info
+org:
+  nit:
+   eno: 1001
+   ename: Ritik
+   favColors:
+    - red
+    - blue
+    - green
+   nickNames:
+    - babu
+    - pagal
+    - sona
+   phoneNumbers:
+    - 99999999
+    - 88888888
+    - 77777777
+   idDetails:
+    aadhar: 989898989
+    voter: 87464Agf
+    panNO: 45567AAA
+   company:
+    id: 89012
+    name: HCL
+    addrs: Bihar
+    size: 300
+# Banner Mode
+spring:
+  main:
+    banner-mode: console
