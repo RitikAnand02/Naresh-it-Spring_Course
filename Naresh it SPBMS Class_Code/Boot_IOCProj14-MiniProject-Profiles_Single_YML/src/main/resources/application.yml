@@ -1,0 +1,53 @@
+# Activate The Profiles
+spring:
+  application:
+    name: Boot_IOCProj14-MiniProject_Profiles
+  profiles:
+    active: uat
+---
+spring:
+  config:
+   activate:
+    on-profile: dev
+   
+  datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql:///ntspbms515
+   username: root
+   password: 1234
+   type: org.apache.commons.dbcp2.BasicDataSource
+---
+spring:
+  config:
+   activate:
+    on-profile: test
+
+  datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql:///ntspbms515
+   username: root
+   password: 1234
+   type: com.mchange.v2.c3p0.ComboPooledDataSource
+---
+spring:
+  config:
+   activate:
+    on-profile: prod
+
+  datasource:
+   driver-class-name: oracle.jdbc.driver.OracleDriver
+   url: jdbc:oracle:thin:@localhost:1521:orcl
+   username: system
+   password: 1234
+---
+spring:
+  config:
+   activate:
+    on-profile: uat
+
+  datasource:
+   driver-class-name: oracle.jdbc.driver.OracleDriver
+   url: jdbc:oracle:thin:@localhost:1521:orcl
+   username: system
+   password: 1234
+   type: oracle.ucp.jdbc.PoolDataSourceImpl	
