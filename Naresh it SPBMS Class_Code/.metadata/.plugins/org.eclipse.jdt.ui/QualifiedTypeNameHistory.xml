@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="com.nt.comps.Courier"/>
-    <fullyQualifiedTypeName name="com.nt.comps.DTDC"/>
-    <fullyQualifiedTypeName name="com.nt.comps.BlueDart"/>
-    <fullyQualifiedTypeName name="com.nt.comps.Flipkart"/>
-    <fullyQualifiedTypeName name="com.nt.factory.FlipkartFactory"/>
-    <fullyQualifiedTypeName name="com.nt.comps.DieselEngine"/>
-    <fullyQualifiedTypeName name="com.nt.comps.ElectricEngine"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-    <fullyQualifiedTypeName name="com.nt.comps.Vehicle"/>
-    <fullyQualifiedTypeName name="com.nt.factory.VehicleFactory"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Lazy"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
@@ -42,22 +31,33 @@
     <fullyQualifiedTypeName name="com.nt.sbeans.Hotel"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ImportResource"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
     <fullyQualifiedTypeName name="com.nt.sbeans.PatientInfo"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
     <fullyQualifiedTypeName name="com.nt.sbeans.Company"/>
     <fullyQualifiedTypeName name="org.springframework.boot.context.properties.ConfigurationProperties"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="com.nt.sbeans.Employee"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Profile"/>
     <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.EnableScheduling"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.Scheduled"/>
     <fullyQualifiedTypeName name="com.nt.controller.PayrollOperationsController"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.nt.repository.IDoctorRepo"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
+    <fullyQualifiedTypeName name="com.nt.service.DoctorMgmtServiceImpl"/>
+    <fullyQualifiedTypeName name="com.nt.entity.Doctor"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>
