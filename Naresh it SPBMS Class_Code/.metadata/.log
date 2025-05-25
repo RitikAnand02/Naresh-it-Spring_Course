@@ -2608,3 +2608,441 @@ org.eclipse.swt.SWTException: Graphic is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+!SESSION 2025-05-25 18:10:03.658 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-25 18:16:33.295
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2025-05-25 18:16:34.976
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.epp.mpc.core [363]
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.epp.mpc.core [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-1650"; osgi.identity="org.eclipse.epp.mpc.core"; singleton:="true"] because it is exposed to package 'org.apache.hc.core5.http' from resources org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.2.3.v20230922-1600"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"] and org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.2.v20250110-0800"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.epp.mpc.core [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-1650"; osgi.identity="org.eclipse.epp.mpc.core"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.hc.core5.http)(&(version>=5.1.0)(!(version>=5.3.0))))
+     |
+    export: osgi.wiring.package: org.apache.hc.core5.http
+  org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.2.3.v20230922-1600"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"]
+
+Chain 2:
+  org.eclipse.epp.mpc.core [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-1650"; osgi.identity="org.eclipse.epp.mpc.core"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.hc.client5.http)(&(version>=5.1.0)(!(version>=5.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.hc.client5.http; uses:=org.apache.hc.core5.http
+  org.apache.httpcomponents.client5.httpclient5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.1.v20240126-0900"; osgi.identity="org.apache.httpcomponents.client5.httpclient5"]
+    import: (&(osgi.wiring.package=org.apache.hc.core5.http)(&(version>=5.2.0)(!(version>=6.0.0))))
+     |
+    export: osgi.wiring.package: org.apache.hc.core5.http
+  org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.2.v20250110-0800"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"]
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2074)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2065)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2005)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1968)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1884)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY org.eclipse.epp.mpc.core.win32 4 0 2025-05-25 18:16:35.065
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.epp.mpc.core.win32 [364]
+  Unresolved requirement: Import-Package: org.eclipse.epp.internal.mpc.core.transport.httpclient; bundle-version="1.11.0"
+    -> Export-Package: org.eclipse.epp.internal.mpc.core.transport.httpclient; bundle-symbolic-name="org.eclipse.epp.mpc.core"; bundle-version="1.11.0.v20240709-1650"; version="0.0.0"; x-friends:="org.eclipse.epp.mpc.core.win32"; uses:="org.apache.http.auth,  org.apache.http.protocol,  org.apache.http.impl.client,  org.apache.http,  org.eclipse.epp.mpc.core.service,  org.apache.http.client,  org.eclipse.core.runtime,  org.apache.http.client.fluent,  org.apache.http.client.protocol"
+       org.eclipse.epp.mpc.core [363]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.epp.mpc.core.win32 [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-0639"; osgi.identity="org.eclipse.epp.mpc.core.win32"; singleton:="true"] because it is exposed to package 'org.apache.hc.client5.http.auth' from resources org.apache.httpcomponents.client5.httpclient5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.1.v20240126-0900"; osgi.identity="org.apache.httpcomponents.client5.httpclient5"] and org.apache.httpcomponents.client5.httpclient5 [osgi.identity; type="osgi.bundle"; version:Version="5.4.1.v20241029-1100"; osgi.identity="org.apache.httpcomponents.client5.httpclient5"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.epp.mpc.core.win32 [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-0639"; osgi.identity="org.eclipse.epp.mpc.core.win32"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.hc.client5.http.auth)(&(version>=5.1.0)(!(version>=5.4.0))))
+     |
+    export: osgi.wiring.package: org.apache.hc.client5.http.auth
+  org.apache.httpcomponents.client5.httpclient5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.1.v20240126-0900"; osgi.identity="org.apache.httpcomponents.client5.httpclient5"]
+
+Chain 2:
+  org.eclipse.epp.mpc.core.win32 [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-0639"; osgi.identity="org.eclipse.epp.mpc.core.win32"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.hc.client5.http.impl.win)(&(version>=5.1.0)(!(version>=5.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.hc.client5.http.impl.win; uses:=org.apache.hc.client5.http.auth
+  org.apache.httpcomponents.client5.httpclient5-win [osgi.identity; type="osgi.bundle"; version:Version="5.2.3.v20231203-1619"; osgi.identity="org.apache.httpcomponents.client5.httpclient5-win"]
+    import: (&(osgi.wiring.package=org.apache.hc.client5.http.auth)(&(version>=5.2.0)(!(version>=6.0.0))))
+     |
+    export: osgi.wiring.package: org.apache.hc.client5.http.auth
+  org.apache.httpcomponents.client5.httpclient5 [osgi.identity; type="osgi.bundle"; version:Version="5.4.1.v20241029-1100"; osgi.identity="org.apache.httpcomponents.client5.httpclient5"]
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2074)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2065)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2005)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1968)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1884)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2025-05-25 18:16:35.134
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.epp.mpc.ui [366]
+  Unresolved requirement: Require-Bundle: org.eclipse.epp.mpc.core; bundle-version="[1.11.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.epp.mpc.core; bundle-version="1.11.0.v20240709-1650"; singleton:="true"
+       org.eclipse.epp.mpc.core [363]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.epp.mpc.core [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-1650"; osgi.identity="org.eclipse.epp.mpc.core"; singleton:="true"] because it is exposed to package 'org.apache.hc.core5.http' from resources org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.2.3.v20230922-1600"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"] and org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.2.v20250110-0800"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.epp.mpc.core [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-1650"; osgi.identity="org.eclipse.epp.mpc.core"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.hc.core5.http)(&(version>=5.1.0)(!(version>=5.3.0))))
+     |
+    export: osgi.wiring.package: org.apache.hc.core5.http
+  org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.2.3.v20230922-1600"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"]
+
+Chain 2:
+  org.eclipse.epp.mpc.core [osgi.identity; type="osgi.bundle"; version:Version="1.11.0.v20240709-1650"; osgi.identity="org.eclipse.epp.mpc.core"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.hc.client5.http)(&(version>=5.1.0)(!(version>=5.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.hc.client5.http; uses:=org.apache.hc.core5.http
+  org.apache.httpcomponents.client5.httpclient5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.1.v20240126-0900"; osgi.identity="org.apache.httpcomponents.client5.httpclient5"]
+    import: (&(osgi.wiring.package=org.apache.hc.core5.http)(&(version>=5.2.0)(!(version>=6.0.0))))
+     |
+    export: osgi.wiring.package: org.apache.hc.core5.http
+  org.apache.httpcomponents.core5.httpcore5 [osgi.identity; type="osgi.bundle"; version:Version="5.3.2.v20250110-0800"; osgi.identity="org.apache.httpcomponents.core5.httpcore5"]
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2074)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2065)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2005)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1968)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1884)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-25 18:16:53.956
+!MESSAGE Logback config file: D:\Naresh it SPBMS course\Naresh it SPBMS Class_Code\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-05-25 18:16:56.711
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-05-25 18:16:56.711
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-05-25 18:16:57.880
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-05-25 18:16:57.880
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-05-25 18:17:19.464
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\HP\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=D:/Naresh it SPBMS course/Naresh it SPBMS Class_Code/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1748177239464
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\Users\HP\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.61.1.202503181316\servers\spring-boot-language-server\spring-boot-language-server-1.61.1-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:19.464
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-05-25 18:17:19.495
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 12252
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:34.324
+!MESSAGE Boot project ADDED: BootJpaProj02-PagingSortingRepository
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:34.325
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:34.328
+!MESSAGE Started Boot LS process
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-25 18:17:35.192
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\HP'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:35.232
+!MESSAGE Boot project ADDED: BootJpaProj03-JpaRepository
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:35.665
+!MESSAGE Boot project ADDED: BootJpaProj04-CustomMethods-finderMethods
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:35.828
+!MESSAGE Boot project ADDED: BootJpaProj05-CustomMethods-QueryMethods
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:36.017
+!MESSAGE Boot project ADDED: BootJpaProj06-Versoning&TimeStamping
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:36.203
+!MESSAGE Boot project ADDED: BootJpaProj07-JODA-DateTimeAPI
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:36.420
+!MESSAGE Boot project ADDED: BootJpaProj08-LOBS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:37.719
+!MESSAGE Boot project ADDED: BootJpaProj09-CallingPL-SQLProcedure-Oracle
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:37.866
+!MESSAGE Boot project ADDED: BootJpaProj10-CallingPL-SQLProcedure-MySQL
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:37.973
+!MESSAGE Boot project ADDED: BootJpaProj11-CallingPL-SQLProcedure-MySQL
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:38.187
+!MESSAGE Boot project ADDED: BootJpaProj12-AssociationMapping-OToM-MToO
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:39.490
+!MESSAGE Boot project ADDED: BootJpaProj13-AssociationMapping-OToM-MToO-HQLJoins
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:39.678
+!MESSAGE Boot project ADDED: BootJpaProj14-AssociationMapping-ManyToMany
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:39.809
+!MESSAGE Boot project ADDED: Boot_IOCProj01-DependencyInjection-Season_Finder
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:39.934
+!MESSAGE Boot project ADDED: Boot_IOCProj02-DependencyInjection-Wish_Message_Generator
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.076
+!MESSAGE Boot project ADDED: Boot_IOCProj03-DependencyInjection-WeekDay_Finder
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.269
+!MESSAGE Boot project ADDED: Boot_IOCProj04-StrategyDP1_Vehicle
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.483
+!MESSAGE Boot project ADDED: Boot_IOCProj05-StrategyDP2_Vehicle
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.580
+!MESSAGE Boot project ADDED: Boot_IOCProj06-MiniProject1_Database
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.686
+!MESSAGE Boot project ADDED: Boot_IOCProj07-SPEL1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.775
+!MESSAGE Boot project ADDED: Boot_IOCProj08-MiniProject2_MYSQL_SQL
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.844
+!MESSAGE Boot project ADDED: Boot_IOCProj09-SPEL2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:40.924
+!MESSAGE Boot project ADDED: Boot_IOCProj10-Configuration_Properties
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.045
+!MESSAGE Boot project ADDED: Boot_IOCProj11-YML
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.048
+!MESSAGE Boot project ADDED: Boot_IOCProj12-MiniProject-Profiles
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.050
+!MESSAGE Boot project ADDED: Boot_IOCProj13-MiniProject-Profiles_YML
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.053
+!MESSAGE Boot project ADDED: Boot_IOCProj14-MiniProject-Profiles_Single_YML
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.057
+!MESSAGE Boot project ADDED: Boot_IOCProj15-MiniProject_Runners
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.059
+!MESSAGE Boot project ADDED: Boot_IOCProj16-Runners
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.062
+!MESSAGE Boot project ADDED: Boot_JMSProj01-Reciver-PTP
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.065
+!MESSAGE Boot project ADDED: Boot_JMSProj01-Sender-PTP
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.067
+!MESSAGE Boot project ADDED: Boot_JMSProj02-Publisher-PUB-SUB
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.069
+!MESSAGE Boot project ADDED: Boot_JMSProj02-Subscriber-PUB-SUB
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.072
+!MESSAGE Boot project ADDED: Boot_JMSProj03-Reciver-Model
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.080
+!MESSAGE Boot project ADDED: Boot_JMSProj03-Sender-Model
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.088
+!MESSAGE Boot project ADDED: Boot_JPAProj01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.198
+!MESSAGE Boot project ADDED: Boot_MVCProj01-FristApp
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.200
+!MESSAGE Boot project ADDED: Boot_MVCProj02-DataRendering_Basics
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.210
+!MESSAGE Boot project ADDED: Boot_Mail_Proj01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.212
+!MESSAGE Boot project ADDED: Boot_MongoDBProj01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.214
+!MESSAGE Boot project ADDED: Boot_Scheduling_Proj01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.220
+!MESSAGE Boot project ADDED: IOCProj01-DependencyInjection-Setter_Injection
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.224
+!MESSAGE Boot project ADDED: IOCProj02-DependencyInjection-Constructor_Injection
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.226
+!MESSAGE Boot project ADDED: IOCProj03-DependencyInjection-Circular_Injection
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.232
+!MESSAGE Boot project ADDED: IOCProj04-DependencyInjection_Season_Finder
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.234
+!MESSAGE Boot project ADDED: IOCProj05-DependencyInjection-Week_Finder
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.246
+!MESSAGE Boot project ADDED: IOCProj06-DependencyInjection-Week_Finder2_100p_Code_Driven_cgfs
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.254
+!MESSAGE Boot project ADDED: IOCProj09-StrategyDP1-Spring
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.256
+!MESSAGE Boot project ADDED: IOCProj10-StrategyDP1-Spring_Maven
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.257
+!MESSAGE Boot project ADDED: IOCProj11-PropertiesFile-ValueAnnotation
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.259
+!MESSAGE Boot project ADDED: IOCProj11-StrategyDP2-Spring_Maven
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.261
+!MESSAGE Boot project ADDED: IOCProj12-SingletonClass-CoreJava
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.264
+!MESSAGE Boot project ADDED: IOCProj13-StrategyDP-SpringBeanScopes
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.266
+!MESSAGE Boot project ADDED: IOCProj14-PropertiesFile
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.267
+!MESSAGE Boot project ADDED: IOCProj15-StrategyDP-SolvingTheAmbigutyProblem
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.272
+!MESSAGE Boot project ADDED: IOCProj16-I18n
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:17:44.273
+!MESSAGE Boot project ADDED: IOCProj17-SpringBeanLifeCycle-AnnotationDriven
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:20:38.023
+!MESSAGE Classpath changed for project: Boot_MongoDBProj01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:20:38.536
+!MESSAGE Boot project REMOVED: Boot_MongoDBProj01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:20:40.140
+!MESSAGE Classpath changed for project: Boot_MongoDBProj01-Repository
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2025-05-25 18:20:40.333
+!MESSAGE Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1870)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1747)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:66)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:52)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:203)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:527)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:415)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:409)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:435)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:137)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:162)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2025-05-25 18:20:40.335
+!MESSAGE Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2025-05-25 18:20:40.342
+!MESSAGE Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1870)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1747)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:66)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:52)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:203)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:527)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:415)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:410)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:435)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:137)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:162)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2025-05-25 18:20:40.342
+!MESSAGE Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2025-05-25 18:20:41.412
+!MESSAGE Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1870)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1747)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:66)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:52)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:219)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:203)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:1960)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:380)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:259)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:229)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:187)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:411)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:435)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:137)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:162)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2025-05-25 18:20:41.413
+!MESSAGE Launch configuration BootMongoDbProj01Application references non-existing project Boot_MongoDBProj01.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:21:02.158
+!MESSAGE Classpath changed for project: Boot_MongoDBProj01-Repository
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-25 18:21:02.190
+!MESSAGE Boot project ADDED: Boot_MongoDBProj01-Repository
