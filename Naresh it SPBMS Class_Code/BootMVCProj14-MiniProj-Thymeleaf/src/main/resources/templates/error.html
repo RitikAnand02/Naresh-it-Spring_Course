@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<h1  style="color:red;text-align:center">Global Error Page (error.jsp)</h1>
+
+<b> The error Details  are </b>
+   <i> <span th:text="${message}"/> </i> <br>
+   <i> <span th:text="${status}"/> </i> <br>
+ 
+<br> <a th:href="@{/doctor/home}">home</a>
