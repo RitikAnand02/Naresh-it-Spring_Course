@@ -1,0 +1,31 @@
+<html xmlns:th="https://www.thymeleaf.org" ></html>
+
+<h1 style="color:red;text-align:center">User registration  page</h1>
+
+<span  style="color:red;text-align:center" th:if="${param.error}"> Invalid credentials  </span>
+<br>
+<span  style="color:red;text-align:center" th:if="${param.logout}">User Logged out successfully  </span>
+
+<form  th:action="@{/login}"  method="POST">
+  <table border="0"  align="center" bgcolor="cyan">
+    <tr>
+      <td>username ::  </td>
+      <td><input type="text" name="username"/> </td>
+    </tr>
+      <tr>
+      <td>pasword::  </td>
+        <td><input type="text" name="password"/> </td>
+    </tr>
+      <tr>
+      <td colspan="2">
+          <input type="submit" value="Login">
+           <input type="reset" value="cancel">
+     </td>
+    </tr>
+  </table>
+  
+</form>
+  <hr>
+    <h2 ><a href="/oauth2/authorization/facebook">FaceBook login</a> </h2>
+    <br>
+    <h2 ><a href="/oauth2/authorization/google">Google login</a> </h2>
