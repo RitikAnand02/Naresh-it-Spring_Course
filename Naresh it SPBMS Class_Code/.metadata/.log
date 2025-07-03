@@ -8566,3 +8566,20 @@ java.io.IOException: The process cannot access the file because another process 
 	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:219)
 	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3867)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2025-07-03 19:53:58.347
+!MESSAGE The process cannot access the file because another process has locked a portion of the file
+!STACK 0
+java.io.IOException: The process cannot access the file because another process has locked a portion of the file
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:287)
+	at org.eclipse.jgit.util.io.AutoLFInputStream.fillBuffer(AutoLFInputStream.java:213)
+	at org.eclipse.jgit.util.io.AutoLFInputStream.read(AutoLFInputStream.java:169)
+	at java.base/java.io.InputStream.readNBytes(InputStream.java:412)
+	at java.base/java.io.InputStream.readAllBytes(InputStream.java:349)
+	at org.eclipse.jgit.util.IO.readWholeStream(IO.java:121)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.possiblyFilteredLength(WorkingTreeIterator.java:410)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getEntryContentLength(WorkingTreeIterator.java:615)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:219)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3867)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
